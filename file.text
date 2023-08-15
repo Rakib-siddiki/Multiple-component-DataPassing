@@ -1,0 +1,22 @@
+// Parent component
+const App = () => {
+  const [data, setData] = useState([1, 2, 3, 4, 5]);
+
+  return (
+    <div>
+      <h1>My List</h1>
+      <Child data={data} />
+    </div>
+  );
+};
+
+// Child component
+const Child = ({ data }) => {
+  return (
+    <ul>
+      {data.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  );
+};
